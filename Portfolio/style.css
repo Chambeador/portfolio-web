@@ -1,5 +1,222 @@
-*{
-    background-color: rgb(4, 4, 44);
-    font-size: 16px;
-    color: white;
+:root{
+    --color-negro-profundo: #0A0908;
+    --color-azul-oscuro: #22333B;
+    --color-crema: #EAE0D5;
+    --color-dorado-suave: #C6AC8F;
+    --color-marron-elegante: #5E503F;
+    --brillo-fuerte: rgba(198,172,143,0.6);
 }
+
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--color-negro-profundo);
+    color: var(--color-crema);
+    margin: 0;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: var(--color-azul-oscuro);
+    padding: 1rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box; /*padding no aunmente el ancho total*/
+    z-index: 100;
+}
+
+
+.brand{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-dorado-suave)
+}
+
+
+
+.nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+
+.nav a{
+    display:inline-block;
+    color: var(--color-crema);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition:all 0.3s ease;
+}
+
+
+.nav a:hover{
+    background-color: var(--color-dorado-suave);
+    color: var(--color-negro-profundo);
+    transform: translateY(-4px);
+}
+
+.nav a::before, .nav a::after{
+    transition: 0.3s ease;
+    color: var(--color-marron-elegante)
+}
+
+
+.nav a:hover::before{
+    content: "[";
+    margin-right: 4px;
+    
+}
+
+.nav a:hover::after{
+    content: "]";
+    margin-left: 4px;    
+}
+
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+/*
+Vamos a entender bien algunos conceptos
+    Width ancho, en px pixeles exactos en % segun el tamaño del padre
+    max-width:ancho maximo, define el limite superior, no puede crecer mas que esto aunque width: 100%
+    min-width: define el limite inferior, nunca se hace mas pequeño que esto
+    height similar a width pero vertical, se puede suar px,% o vh auto significa que la altura es relativa al contenido
+
+    convinar width + max-width
+    width: 100%; intenta ocupar tdo el ancho del padre
+    max-width: 1300px pero no mas de 1300px
+
+*/
+.hero-container{
+    margin-top: 3rem;
+    width: 100%; /*Todo el ancho dentro del padre*/
+    max-width: 1300px;/*a lo muhco 1300 px*/
+    height: 80vh;/*80% de la pantalla*/
+    border: 2px solid var(--color-marron-elegante);
+    border-radius: 24px;
+    display:flex;
+    align-items:center;
+    gap: 3rem;
+    padding: 3rem;
+    transition: all 0.4s ease;
+}
+
+.hero-container:hover{
+    border-color: var(--color-dorado-suave);
+    box-shadow: 0 0 40px var(--brillo-fuerte);
+}
+
+.hero-image img{
+    width: 700px;
+    max-width: 100%; /*en el peor de los casos toda el espacio del padre*/
+    height: auto;
+    border-radius: 12px;
+}
+
+.hero-image img:hover{
+    box-shadow: 0 0 25px var(--brillo-fuerte);
+}
+
+.hero-text{
+    max-width: 450px;
+}
+
+.hero-text h1{
+    font-size: 3.2rem;
+    margin: 0;
+}
+
+.hero-text h1:hover, p:hover, h2:hover{
+    text-shadow: 
+        0 0 12px var(--brillo-fuerte),  
+        0 0 16px var(--brillo-fuerte), 
+        0 0 32px var(--brillo-fuerte); 
+}
+
+.hero-text h2{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    color: var(--color-dorado-suave);
+}
+
+.hero-text p{
+    margin-top: 1.5rem;
+    line-height: 1.5;
+}
+
+
+#card1{ grid-area: 1/1/2/2;}
+#card2{ grid-area: 1/2/2/3;}
+#card3{ grid-area: 1/3/2/4;}
+#card4{ grid-area: 2/1/3/2;}
+#card5{ grid-area: 2/2/3/3;}
+#card6{ grid-area: 2/3/3/4;}
+#card7{ grid-area: 3/1/4/2;}
+#card8{ grid-area: 3/2/4/3;}
+#card9{ grid-area: 3/3/4/4;}
+
+
+.skill-text h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skill-text p{
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+
+.skill-text{
+    margin: 8em;
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+.skill-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; 
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    gap:2rem;
+}
+
+.skill-card{
+    border: 2px solid var(--color-dorado-suave);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 300px;
+    padding: 2rem;
+    transition: all 0.4s ease;
+}
+
+.skill-card:hover{
+    /*mejor opcion marron elegante, color azul oscuro*/
+    background-color: var(--color-azul-oscuro);
+    transform: translateY(-15px);
+    box-shadow: 0 0 50px var(--brillo-fuerte);
+}
+.skill-icon {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+}
+
+
