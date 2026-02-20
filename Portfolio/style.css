@@ -83,12 +83,6 @@ body{
 }
 
 
-.hero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 2rem;
-}
 
 /*
 Vamos a entender bien algunos conceptos
@@ -102,6 +96,14 @@ Vamos a entender bien algunos conceptos
     max-width: 1300px pero no mas de 1300px
 
 */
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
 .hero-container{
     margin-top: 3rem;
     width: 100%; /*Todo el ancho dentro del padre*/
@@ -171,6 +173,13 @@ Vamos a entender bien algunos conceptos
 #card9{ grid-area: 3/3/4/4;}
 
 
+
+.skill-text{
+    margin: 8em;
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+
 .skill-text h2{
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -181,12 +190,13 @@ Vamos a entender bien algunos conceptos
     line-height: 1.7;
 }
 
-
-.skill-text{
-    margin: 8em;
-    text-align: left;
-    margin-bottom: 2.5rem;
+.skill{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:2rem;
 }
+
 .skill-grid {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -202,7 +212,7 @@ Vamos a entender bien algunos conceptos
     border: 2px solid var(--color-dorado-suave);
     border-radius: 24px;
     width: 100%;
-    max-width: 300px;
+    max-width: 150px;
     padding: 2rem;
     transition: all 0.4s ease;
 }
@@ -219,4 +229,13 @@ Vamos a entender bien algunos conceptos
     height: auto;
 }
 
+
+
+.contenedor{
+    width: 100%;
+    max-width: 1300px;
+    marign: 0 auto;
+    padding: 0 3rem;
+    box-sizing: border-box;
+}
 
