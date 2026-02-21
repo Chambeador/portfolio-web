@@ -496,12 +496,19 @@ Footer por ultimo
 */
 
 .footer{
+    display: flex;
+    justify-content: space-between;
     margin-top: 6rem;
     background-color: var(--color-azul-oscuro);
-    padding: 2rem 1rem;
+    padding: 2rem 6rem;
     border-top: 1px solid var(--color-marron-elegante);
 }
 
+
 .footer p{
     font-size: 0.9rem;
+}
+
+.footer a{
+    margin-left: 1.2em;
 }
