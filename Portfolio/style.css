@@ -472,7 +472,7 @@ tengo un h2 y un p
 }
 
 .contact-text{
-    margin-top: 2rem;
+    margin-top: 6rem;
 }
 
 .contact-text h2{
@@ -488,4 +488,20 @@ tengo un h2 y un p
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+
+/*
+Footer por ultimo
+*/
+
+.footer{
+    margin-top: 6rem;
+    background-color: var(--color-azul-oscuro);
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--color-marron-elegante);
+}
+
+.footer p{
+    font-size: 0.9rem;
 }
