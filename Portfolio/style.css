@@ -454,3 +454,14 @@ a{
 tengo un h2 y un p
 */
 
+/*Contenido de contact*/
+
+.contact-container{
+    display: flex;
+}
+
+.contact-icon{
+    width: 100%;
+    max-width: 800px;
+}
+
