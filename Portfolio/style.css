@@ -475,7 +475,7 @@ tengo un h2 y un p
     display: flex;
     flex-direction: column;
     justify-items: center;
-    text-align: center;
+    
     padding: 6em;
 }
 
@@ -492,7 +492,6 @@ tengo un h2 y un p
     display: flex;
     justify-content: center;
     justify-items: center;
-
     gap: 1rem;
 }
 
@@ -514,6 +513,7 @@ tengo un h2 y un p
 
 */
 .contact-button{
+    margin-right: 2.5em;
     margin-top: 2em;
     color: var(--color-negro-profundo);
     background-color: var(--color-dorado-suave);
@@ -523,6 +523,7 @@ tengo un h2 y un p
     padding: 0.5rem 1.2rem;
     width: 100%;
     max-width: 200px;
+    transition: all 0.5s ease;
 }
 
 .contact-button:hover{
@@ -530,6 +531,9 @@ tengo un h2 y un p
     box-shadow: 0 0 40px var(--brillo-fuerte);
 }
 
+.contact-icon{
+    border-radius: 12px;
+}
 /*
 Footer por ultimo
 */
