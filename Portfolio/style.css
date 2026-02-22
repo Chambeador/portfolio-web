@@ -472,7 +472,11 @@ tengo un h2 y un p
 }
 
 .contact-text{
-    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    padding: 6em;
 }
 
 .contact-text h2{
@@ -486,10 +490,45 @@ tengo un h2 y un p
 
 .contact-links{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+
     gap: 1rem;
 }
 
+
+/*
+
+.experience-content-buttom{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.experience-content-buttom button{
+    color: var(--color-negro-profundo);
+    background-color: var(--color-dorado-suave);
+}
+
+
+
+*/
+.contact-button{
+    margin-top: 2em;
+    color: var(--color-negro-profundo);
+    background-color: var(--color-dorado-suave);
+    cursor:pointer;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.2rem;
+    width: 100%;
+    max-width: 200px;
+}
+
+.contact-button:hover{
+    scale: 1.125;
+    box-shadow: 0 0 40px var(--brillo-fuerte);
+}
 
 /*
 Footer por ultimo
@@ -511,4 +550,9 @@ Footer por ultimo
 
 .footer a{
     margin-left: 1.2em;
+}
+
+.footer-icon{
+    width: 100%;
+    max-width: 40px;
 }
