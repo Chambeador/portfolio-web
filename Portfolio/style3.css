@@ -76,6 +76,8 @@ body{
     background-color: var(--color-superficie);
 }
 
+
+
 .card-head{
     border: 2px solid var(--color-borde);
     border-radius: 8px;
@@ -98,10 +100,14 @@ body{
     background-color: var(--color-motivacion);
 }
 
+
 .challenge{
     background-color: var(--color-reto);
 }
 
+.preference, .interest, .challenge, .motivation{
+    color:var(--color-fondo);
+}
 .head{
     max-height: 10px;
 }
@@ -110,6 +116,7 @@ body{
     padding-top: 2em;
     display: flex;
     justify-content: center;
+    color:var(--color-superficie);
 }
 
 .about_me ul{
