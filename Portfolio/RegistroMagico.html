@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Form</title>
+    <link rel = "stylesheet" href="style2.css">
+</head>
+<body>
+
+     <main class = "main">
+        <h1>Magic Form</h1>
+
+        <form action="#" class = "form">
+            <div class = "box-content">
+                <label for = "name">Name:</label>
+                <input type = "text" id = "name" required class = "box">
+            </div>
+
+            <div class = "box-content">
+                <label for = "age">Age:</label>
+                <input type = "number" id = "age" required class = "small-box">        
+            </div>
+            
+            <div class = "box-content">
+                <label for="language">Preferred language:</label>
+                <select id = "language" class = "small-box">
+                    <option>None</option>
+                    <option>Java</option>
+                    <option>C++</option>
+                    <option>Python</option>
+                </select>
+            </div>
+
+            <div class = "box-content">
+                <label for = "level">Skill level:</label>
+                <select id = "level" class = "small-box" >
+                    <option>None</option>
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+            </div>
+            <div class = "box-content">
+                <label for = "message">Message</label>
+                <textarea id = "message" 
+                placeholder="Here, you might write something about yourself" class = "box"></textarea>
+            </div>   
+
+            <div class = "box-content">
+                <label for = "email">Email:</label>
+                <input type = "email" id = "email" class = "box">
+            </div>    
+    
+            <div>
+                <p>Are you sure?</p>
+                <input type="radio" id="yes" name = "group">
+                <label for="yes">Yes</label>
+
+                <input type="radio" id="no" name = "group">
+                <label for="no">No</label>
+            </div>
+            <button type = "submit" class = "small-box">Send</button>
+        </form>
+    </main>
+</body>
+</html>
