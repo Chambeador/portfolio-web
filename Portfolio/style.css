@@ -19,7 +19,6 @@ body{
 }
 
 .header{
-    position: fixed;
     width: 100%;
     font-size: 1.5rem;
     background-color: var(--color-azul-oscuro);
@@ -102,7 +101,7 @@ Vamos a entender bien algunos conceptos
 }
 
 .hero-container{
-    height: 80vh;
+    margin-top: 6em;
     border: 2px solid var(--color-marron-elegante);
     border-radius: 24px;
     display:flex;
@@ -190,7 +189,6 @@ Vamos a entender bien algunos conceptos
 
 .skill-grid {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr; 
     justify-items: center;
     justify-content: center;
@@ -559,4 +557,109 @@ Footer por ultimo
 .footer-icon{
     width: 100%;
     max-width: 40px;
+}
+
+
+
+
+
+@media (max-width: 430px){
+    .header{
+        /*fixed pero feo en position*/
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1.1rem;
+    }
+
+    .nav ul{
+        flex-direction: column;
+        gap: 0.2rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero-container{
+        flex-direction: column;
+        padding: 1.5em;
+        margin-top: 0.2em;
+        text-align: center;
+    }
+
+    .hero-text h1{
+        font-size: 2.5rem;
+    }
+
+    .hero-text h2{
+        font-size: 1.5rem;
+    }
+
+
+    .about_me-grid{
+        grid-template-columns: 1fr;
+    }
+
+    #card11,
+    #card22,
+    #card33,
+    #card44,
+    #card55 {
+        grid-area: auto;
+    }
+
+
+
+    .skill-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #card1,
+    #card2,
+    #card3,
+    #card4,
+    #card5,
+    #card6,
+    #card7,
+    #card8,
+    #card9{
+        grid-area: auto;
+    }
+
+    .skill-card{
+        width: 100%;
+        max-width: 120px;
+        padding: 1.2em;
+    }
+
+    .experience-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-text{
+        padding: 2em 1em;
+        align-items: center;
+    }
+
+    .contact-button{
+        margin-top: 1em;
+        margin-right: 0;
+    }
+
+    .contact-icon{
+        margin-top: 2em;
+    }
+
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap:1em;
+        padding: 4em 1em;
+    }
+
 }
