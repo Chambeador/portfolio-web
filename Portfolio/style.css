@@ -33,7 +33,6 @@ body{
 
 .brand{
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
     color: var(--color-dorado-suave)
 }
 
@@ -97,11 +96,13 @@ Vamos a entender bien algunos conceptos
 */
 
 .hero{
-    padding: 6rem 0 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-container{
-    margin-top: 6em;
     border: 2px solid var(--color-marron-elegante);
     border-radius: 24px;
     display:flex;
@@ -117,8 +118,8 @@ Vamos a entender bien algunos conceptos
 }
 
 .hero-image img{
-    width: 700px;
-    max-width: 100%; /*en el peor de los casos toda el espacio del padre*/
+    width: 100%;
+    max-width: 600px;
     height: auto;
     border-radius: 12px;
 }
@@ -300,27 +301,7 @@ Aqui empezamos con experience
 }
 
 
-/*Animacion bonita*/
-#experience .experience-card:hover .experience-content-buttom button{
-    animation: none; 
-}
 
-#experience:hover .experience-content-buttom button {
-    animation: jump-button 1s infinite ease-in-out;
-    box-shadow: 
-        0 0 4px var(--brillo-fuerte),  
-        0 0 8px var(--brillo-fuerte), 
-        0 0 16px var(--brillo-fuerte);
-    transition: 0.3s ease;
-}
-
-@keyframes jump-button {
-    0%, 100% { transform: translateY(0); }    
-    25% { transform: translateY(-4px); }      
-    50% { transform: translateY(0); }         
-    75% { transform: translateY(-4px); }     
-}
-/*Fin de la animacion*/
 
 .experience-content-buttom{
     margin-top: 1em;
@@ -565,7 +546,6 @@ Footer por ultimo
 
 @media (max-width: 430px){
     .header{
-        /*fixed pero feo en position*/
         flex-direction: column;
         align-items: flex-start;
         font-size: 1.1rem;
@@ -597,11 +577,7 @@ Footer por ultimo
         grid-template-columns: 1fr;
     }
 
-    #card11,
-    #card22,
-    #card33,
-    #card44,
-    #card55 {
+    #card11,#card22,#card33,#card44,#card55 {
         grid-area: auto;
     }
 
@@ -611,15 +587,7 @@ Footer por ultimo
         grid-template-columns: 1fr 1fr;
     }
 
-    #card1,
-    #card2,
-    #card3,
-    #card4,
-    #card5,
-    #card6,
-    #card7,
-    #card8,
-    #card9{
+    #card1,#card2,#card3,#card4,#card5,#card6,#card7,#card8,#card9{
         grid-area: auto;
     }
 
@@ -663,3 +631,56 @@ Footer por ultimo
     }
 
 }
+
+
+@media (max-width: 768px){
+    .header{
+        font-size: 1.3rem;
+    }
+
+    .hero-container{
+        flex-direction: column;
+        text-align: center;
+        gap: 2em;
+        padding: 2em;
+    }
+
+    .about_me-grid{
+        grid-template-columns: 1fr;
+    }
+    
+    .about_me-icon{
+        height: 100%;
+        max-height: 700px;
+    }
+    #card11,
+    #card22,
+    #card33,
+    #card44,
+    #card55 {
+        grid-area: auto;
+    }
+
+    .experience-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-button{
+        margin: 0;
+    }
+
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        gap:2em;
+    }
+
+}
+
