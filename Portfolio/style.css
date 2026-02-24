@@ -81,20 +81,6 @@ body{
 }
 
 
-
-/*
-Vamos a entender bien algunos conceptos
-    Width ancho, en px pixeles exactos en % segun el tamaño del padre
-    max-width:ancho maximo, define el limite superior, no puede crecer mas que esto aunque width: 100%
-    min-width: define el limite inferior, nunca se hace mas pequeño que esto
-    height similar a width pero vertical, se puede suar px,% o vh auto significa que la altura es relativa al contenido
-
-    convinar width + max-width
-    width: 100%; intenta ocupar tdo el ancho del padre
-    max-width: 1300px pero no mas de 1300px
-
-*/
-
 .hero{
     min-height: 100vh;
     display: flex;
@@ -232,13 +218,10 @@ font-size: 1.25rem;
 }
 
 
-
-
 /*
 Aqui empezamos con experience
 
 */
-
 
 .experience-content{
     display:flex;
@@ -391,6 +374,12 @@ a{
 .about_me-card:hover{
     background-color: var(--color-azul-oscuro);
     transform: translateY(-10px);
+}
+
+#card44 a{
+    padding: 0.1em;
+    color: black;
+    background-color: var(--color-dorado-suave);
 }
 
 
