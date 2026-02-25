@@ -19,6 +19,7 @@ body{
 }
 
 .header{
+    position: fixed;
     width: 100%;
     font-size: 1.5rem;
     background-color: var(--color-azul-oscuro);
@@ -64,7 +65,6 @@ body{
 }
 
 .nav a::before, .nav a::after{
-    transition: 0.3s ease;
     color: var(--color-marron-elegante)
 }
 
@@ -140,6 +140,9 @@ body{
     margin-top: 1.5rem;
     line-height: 1.5;
 }
+
+
+
 
 
 #card1 { grid-area: 1/1/2/2;}
