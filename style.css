@@ -534,9 +534,24 @@ Footer por ultimo
 
 
 
+#top-btn{
+    position: fixed;
+    bottom: 8rem;
+    right: 2rem;
+    font-size: 2rem;
+    padding: 0.3em 0.5em;
+    border-radius: 1rem;
+    background: var(--color-dorado-suave);
+    color: black;
+    cursor: pointer;
+    box-shadow:
+        0 0 8px var(--brillo-fuerte),
+        0 0 16px var(--brillo-fuerte),
+        0 0 32px var(--brillo-fuerte);
+}
+
 
 /*RESPONSIVO ------------------------------------------------------------------------------------*/
-
 
 
 @media (max-width: 430px){
@@ -622,8 +637,17 @@ Footer por ultimo
         align-items: center;
         text-align: center;
         gap:1em;
-        padding: 4em 1em;
+        padding: 1.5em 1em;
     }
+
+    #top-btn{
+        position: fixed;
+        right: 0;
+        bottom: 30px;
+        border-radius: 12px 0 0 12px;
+        padding: 12px 14px;
+    }
+
 
 }
 
@@ -687,7 +711,7 @@ Footer por ultimo
         gap:2em;
     }
 
-    /*burguesa*/
+    /*burguesa aparecer*/
     .menu-btn{
         display:block;
     }
@@ -722,6 +746,11 @@ Footer por ultimo
         0 0 64px var(--brillo-fuerte);
     }
 
+    #top-btn{
+        right: 0px;
+        bottom: 12rem;   
+        width: 48px;
+    }
 }
 
 
