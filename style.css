@@ -221,6 +221,31 @@ font-size: 1.25rem;
 }
 
 
+.about_me-link{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.about_me-button{
+    padding: 0.6rem 1.2rem;
+    font-size: 1.1rem;
+    max-width: 250px;
+    background-color: var(--color-dorado-suave);
+    cursor: pointer;
+    border-radius: 16px;
+        box-shadow: 
+        0 0 8px var(--brillo-fuerte),  
+        0 0 12px var(--brillo-fuerte), 
+        0 0 16px var(--brillo-fuerte); 
+    transition: all 0.6 ease;
+}
+
+.about_me-button:hover{
+    transform: translateY(-4px);
+}
+
+
 /*
 Aqui empezamos con experience
 
@@ -382,7 +407,6 @@ a{
 #card44 a{
     padding: 0.1em;
     color: black;
-    background-color: var(--color-dorado-suave);
 }
 
 
@@ -495,6 +519,7 @@ tengo un h2 y un p
     width: 100%;
     max-width: 200px;
     transition: all 0.5s ease;
+    box-shadow: 0 0 40px var(--brillo-fuerte);
 }
 
 .contact-button:hover{
